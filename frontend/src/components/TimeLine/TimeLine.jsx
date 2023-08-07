@@ -9,7 +9,29 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { Event } from "@mui/icons-material";
 import Typography from "@mui/material/Typography";
 
-const TimeLine = ({timelines=[]}) => {
+const TimeLine = () => {
+  const timelines=[
+    {
+      date:"Nov 2020",
+      title:"UIET Hsp.",
+      description:"C.S.E. degree Started and also started Web Development"
+    },
+    {
+      date:"July 2022",
+      title:"SkySpace React Internship",
+      description:"Done 2 Month React Internship at Skyspace- made Ecommerce website"
+    },
+    {
+      date:"July 2022",
+      title:"ReactJs Training",
+      description:"Done Js and ReactJs offline Training at Imminent Softwares,Mohali"
+    },
+    {
+      date:"April 2023",
+      title:"Seclance- Frontend internship",
+      description:"Made many projects using techstack like Reactjs, Nextjs, Tailwindcss, Typescript etc."
+    },
+  ]
   return (
     <Timeline position="alternate">
         {

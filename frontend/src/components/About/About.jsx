@@ -6,11 +6,11 @@ const About = ({about}) => {
   return (
     <div className="about">
       <div className="aboutContainer">
-        <Typography>{about.quote}</Typography>
+        <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae id labore accusamus! </Typography>
       </div>
       <div className="aboutContainer2">
         <div>
-          <img
+          {/* <img
             src={
               about.avatar.url
                 ? about.avatar.url
@@ -18,16 +18,16 @@ const About = ({about}) => {
             }
             alt="Rajan"
             className="aboutAvatar"
-          />
+          /> */}
           <Typography
             variant="h4"
             style={{ margin: "1vmax 0", color: "black" }}
           >
-            {about.name}
+            Rajan Goyal
           </Typography>
-          <Typography>{about.title}</Typography>
+          <Typography>Web Developer</Typography>
           <Typography style={{ margin: "1vmax 0" }}>
-            {about.subtitle}
+            Full Stack Developer
           </Typography>
         </div>
         <div>
@@ -39,7 +39,8 @@ const About = ({about}) => {
               textAlign: "right",
             }}
           >
-            {about.description}
+            I am a webDeveloper specialised in Frontend. I have worked on technologies like React JS , Nextjs, Typescript and Tailwind Css.
+            Also made some projects with MERN stack.
           </Typography>
         </div>
       </div>

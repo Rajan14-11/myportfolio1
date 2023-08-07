@@ -15,43 +15,46 @@ import AdminTimeline from "./components/AdminPanel/Timeline";
 import AdminProjects from "./components/AdminPanel/Project";
 
 function App() {
-  const dispatch = useDispatch();
-  const { isAuthenticated } = useSelector((state) => state.login);
-  const { loading ,user} = useSelector((state) => state.user);
+  // const dispatch = useDispatch();
+  // // const { isAuthenticated } = true;
+  // // const { loading ,user} = useSelector((state) => state.user);
 
-  useEffect(() => {
-    dispatch(getUser());
-    {localStorage.getItem('token')&&
-    dispatch(loadUser());
-  }
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getUser());
+  //   {localStorage.getItem('token')&&
+  //   dispatch(loadUser());
+  // }
+  // }, [dispatch]);
 
   return (
     <Router>
       <Header />
-      {loading ? (
+      {/* {loading ? (
         "loading"
-      ) : (
+      ) : ( */}
         <Routes>
-          <Route path="/" element={<Home timelines={user.timeline} skills={user.skills} />} />
-          <Route path="/about" element={<About about={user.about} />} />
-          <Route path="/projects" element={<Projects projects={user.projects} />} />
+          <Route path="/" element={<Home/>} />
+          {/* <Route path="/" element={<Home timelines={user.timeline} skills={user.skills} />} /> */}
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About about={user.about} />} /> */}
+          {/* <Route path="/projects" element={<Projects projects={user.projects} />} /> */}
+          <Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<Contact />} />
-          <Route
+          {/* <Route
             path="/account"
-            element={isAuthenticated ? <AdminPanel /> : <Login />}
+            element={<AdminPanel /> : <Login />}
           />
           <Route
             path="/admin/timeline"
-            element={isAuthenticated ? <AdminTimeline /> : <Login />}
+            element={<AdminTimeline /> : <Login />}
           />
           <Route
             path="/admin/project"
             element={isAuthenticated ? <AdminProjects /> : <Login />}
-          />
+          /> */}
           <Route path="/adminpanel" element={<AdminPanel/>}/>
         </Routes>
-      )}
+      {/* )} */}
       <Footer />
     </Router>
   );

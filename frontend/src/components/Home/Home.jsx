@@ -19,6 +19,13 @@ import {
 import { Link } from "react-router-dom";
 import { MouseOutlined } from "@mui/icons-material";
 import TimeLine from '../TimeLine/TimeLine';
+import image1 from "../../images/nextjs.jpeg"
+import image2 from "../../images/reactjs.png"
+import image3 from "../../images/typescript.png"
+import image4 from "../../images/nodejs.png"
+import image5 from "../../images/mongodb.png"
+import image6 from "../../images/js.jpeg"
+import iosSolution from "../../images/iosSolutionProject.png"
 
 const Home = ({skills,timelines}) => {
    console.log({skills,timelines})
@@ -155,27 +162,27 @@ return window.addEventListener("scroll", () => {
 
         <div className="homeCubeSkills">
           <div className="homeCubeSkillsFaces homeCubeSkillsFace1">
-            <img src={skills.image1.url} alt="Face1" />
+            <img src={image1} alt="Face1" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace2">
-            <img src={skills.image2.url} alt="Face2" />
+            <img src={image2} alt="Face2" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace3">
-            <img src={skills.image3.url} alt="Face3" />
+            <img src={image3} alt="Face3" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace4">
-            <img src={skills.image4.url} alt="Face4" />
+            <img src={image4} alt="Face4" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace5">
-            <img src={skills.image5.url} alt="Face5" />
+            <img src={image5} alt="Face5" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace6">
-            <img src={skills.image6.url} alt="Face6" />
+            <img src={image6} alt="Face6" />
           </div>
         </div>
 
@@ -191,6 +198,40 @@ return window.addEventListener("scroll", () => {
           <SiNodedotjs />
           <SiThreedotjs />
         </div>
+      </div>
+      <div className="homeprojects">
+        <Typography variant="h3">PROJECTS</Typography>
+        <div className="homeProjectscontainer">
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+          <div className="homeprojectcard">
+            <img src={iosSolution} />
+          </div>
+        </div>
+        
+        <Link to="/projects">VIEW ALL PROJECTS</Link>
       </div>
     </div>
   );

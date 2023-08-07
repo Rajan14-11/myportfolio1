@@ -6,6 +6,7 @@ import { Delete } from "@mui/icons-material";
 import { FaRegSmileWink } from "react-icons/fa";
 import { deleteProject, getUser } from "../../actions/user";
 import { useDispatch } from "react-redux";
+import iosSolutionImage from "../../images/iosSolutionProject.png"
 
 export const ProjectCard = ({
   url,
@@ -27,7 +28,10 @@ export const ProjectCard = ({
     <>
       <a href={url} className="projectCard" target="black">
         <div>
-          <img src={projectImage} alt="Project" />
+          <img src={projectImage} alt="Project" style={{
+            height:"100%",
+            width:"100%"
+          }} />
           <Typography variant="h5">{projectTitle}</Typography>
         </div>
         <div>
@@ -49,7 +53,29 @@ export const ProjectCard = ({
   );
 };
 
-const Projects = ({ projects = [1, 2, 3] }) => {
+const Projects = () => {
+  const projects = [
+    {
+      url: "https://iossolution.vercel.app/",
+      projectImage: iosSolutionImage,
+      projectTitle: "IosSolution",
+      description:
+        "A single page application built to display info about a repairing center. ",
+      technologies: "Next JS, Tailwind Css Javascript",
+      isAdmin: false,
+      id: 1,
+    },
+    {
+      url: "https://seclance.vercel.app/",
+      projectImage: iosSolutionImage,
+      projectTitle: "Seclance",
+      description:
+        "A single page application built to display info about a repairing center.",
+      technologies: "Next JS, Tailwind Css Javascript",
+      isAdmin: false,
+      id: 1,
+    },
+  ];
   return (
     <div className="projects">
       <Typography variant="h3">
@@ -59,13 +85,13 @@ const Projects = ({ projects = [1, 2, 3] }) => {
       <div className="projectsWrapper">
         {projects.map((item) => (
           <ProjectCard
-            id={item._id}
-            key={item._id}
+            id={item.id}
+            key={item.id}
             url={item.url}
-            projectImage={item.image.url}
-            projectTitle={item.title}
+            projectImage={item.projectImage}
+            projectTitle={item.projectTitle}
             description={item.description}
-            technologies={item.techStack}
+            technologies={item.technologies}
           />
         ))}
       </div>
